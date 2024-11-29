@@ -117,10 +117,26 @@ nav a{
     nav.hidden{
         transform: translateX(0);
     }
+    .log button{
+        width: 80px;
+        height: 40px;
+    }
+    .btn button{
+        width: 100px;
+        height: 40px;
+    }
 }
 @media screen and (max-width:470px) {
     .logo img{
         width: 90%;
+        }
+        .log button{
+            width: 80px;
+            height: 40px;
+        }
+        .btn button{
+            width: 100px;
+            height: 40px;
         }
 }
 
