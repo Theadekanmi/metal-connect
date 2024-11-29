@@ -125,7 +125,7 @@ nav a{
 }
 
 #cl{
-    background-image: url(meta.jpg);
+    background-image: url(contact.jpg);
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -140,38 +140,16 @@ nav a{
 .cl-item{
     margin-top: 100px;
     width: 60%;
-    height: 600px;
+    height: 250px;
 }
 .cl-item h1{
     text-align: center;
     font-weight: 800;
-    line-height: 3;
-    font-size: 4rem;
-    margin-top: 60px;
-    color: rgb(255, 255, 255);
-}
-.cl-item p{
-    text-align: center;
-    font-size: 1.4rem;
+    font-size: 6rem;
+    margin-top: 40px;
     color: rgb(255, 255, 255);
 }
 
-.btnn button{
-    margin-top: 40px;
-    width: 120px;
-    height: 50px;
-   background-color:  rgb(21, 90, 3);
-   font-size: 1.4rem;
-   border-radius: 10px;
-   border: none;
-  
-}
-.btnn a{
-    text-align: center;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    
-}
 
 /* media querry for cl  */
 @media screen and (max-width:1100px){
@@ -187,9 +165,6 @@ nav a{
         line-height: 1;
         font-size: 3rem;
     }
-    .cl-item p{
-        margin-top: 20px;
-    }
 }
 @media screen and (max-width:768px){
     .cl-cont{
@@ -204,9 +179,6 @@ nav a{
         line-height: 1;
         font-size: 3rem;
     }
-    .cl-item p{
-        margin-top: 20px;
-    }
 }
 
 .cycling-cont{
@@ -216,15 +188,17 @@ nav a{
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: rgb(21, 90, 3);
+    /* background-color: rgb(21, 90, 3); */
 }
 .cycling-item{
     text-align: center;
     width: 40%;
     height: 130px;
     background-color: rgb(21, 90, 3);
+    border-radius: 5px;
 }
 .cycling-item h1{
+    margin-top: 30px;
     font-size: 1.2rem;
     color: rgb(255, 255, 255);
     font-weight: 800;
@@ -265,36 +239,13 @@ nav a{
     gap: 20px;
 }
 .met-item{
-    width: 60%;
-    height: 800px;
-}
-.met-item img{
     width: 100%;
+    height: 500px;
+    position: relative;
 }
-.met-item h4{
-    color: rgb(0, 128, 0);
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-.met-item h1{
-    color: rgb(21, 90, 3);
-    font-weight: 800;
-    font-size: 1.6rem;
-    margin-top: 20px;
-}
-.met-item h5{
-    color: rgb(0, 128, 0);
-    font-size: 1rem;
-    margin-top: 20px;
-}
- .pp{
-    background-color: rgb(21, 90, 3);
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    border-radius: 15px;
-    padding: 5%;
+.met-item iframe{
     width: 100%;
-    height:20%;
+    height: 100%;
 }
 
 @media screen and (max-width:1100px){
@@ -302,10 +253,8 @@ nav a{
         flex-direction: column;
     }
     .met-item{
-        width: 90%;
-    }
-    .met-item h4{
-        margin-top: 200px;
+        width: 100%;
+        height: 600px;
     }
 }
 @media screen and (max-width:1100px){
@@ -317,106 +266,9 @@ nav a{
         width: 90%;
         height: fit-content;
     }
-    .met-item h4{
-        margin-top: 50px;
-    }
+    
 }
 
-#smart h3{
-    text-align: center;
-    color: rgb(21, 90, 3);
-    font-size: 1.4rem;
-}
-.smart-cont{
-    width: 100%;
-    padding: 3%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-.smart-item{
-    width: 35%;
-    height: 600px;
-    text-align: center;
-}
-.smart-item img{
-    width: 100%;
-}
-.smart-item h6{
-    color: rgb(21, 90, 3);
-    font-size: 1.4rem;
-}
-
-@media screen and (max-width:1100px){
-    .smart-cont{
-        flex-direction: column;
-    }
-    .smart-item{
-        width: 90%;
-        height: fit-content;
-    }
-}
-@media screen and (max-width:768px){
-    .smart-cont{
-        flex-direction: column;
-    }
-    .smart-item{
-        width: 90%;
-        height: fit-content;
-    }
-}
-/* emp styling  */
-#emp h1{
-    text-align: center;
-    color: rgb(21, 90, 3);
-    font-size: 1.8rem;
-}
-#emp p{
-    text-align: center;
-}
-.emp-cont{
-    width: 100%;
-    padding: 3%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-.emp-item{
-    width: 35%;
-    height: 300px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-.emp-item h2{
-    text-align: center;
-    color: rgb(21, 90, 3);
-    font-size: 1.3rem;
-    margin-top: 30px;
-}
-.emp-item p{
-    color: green;
-    margin-top: 20px;
-}
-
-@media screen and (max-width:1100px){
-    #emp h1{
-        margin-top: 50px;
-    }
-    .emp-cont{
-        flex-direction: column;
-    }
-    .emp-item{
-        width: 90%;
-        height: 400px;
-    }
-    .emp-item h2{
-        margin-top: 60px;
-    }
-}
 
 /* footer styling  */
 .foot-cont{
@@ -474,4 +326,3 @@ nav a{
         justify-content: center;
     }
 }
-
