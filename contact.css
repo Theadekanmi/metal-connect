@@ -109,14 +109,14 @@ nav a{
         font-size: 1.5rem;
     }
 
-    /* .menu{
+    .menu{
         display: flex;
         
-    } */
+    }
     
-    /* nav.hidden{
+    nav.hidden{
         transform: translateX(0);
-    } */
+    }
 }
 @media screen and (max-width:470px) {
     .logo img{
