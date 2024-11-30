@@ -11,124 +11,101 @@
     }
 
 
-header{
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   padding: 3%;
-   background-color: rgb(246,246,246);
-}
-.logo img{
-width: 40%;
-}
-nav{
-    transform: translateX(-150px);
-    display: flex;
-    gap: 50px;
-    
-}
-nav a{
-    text-decoration: none;
-    color:  rgb(21, 90, 3);
-    border: none;
-    font-size: 1.4rem;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-   
-}
-#con{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.log button{
-    width: 120px;
-    height: 50px;
-    border: 1px solid black;
-   font-size: 1.4rem;
-   border-radius: 10px;
-   box-shadow: -1px -2px 11px 7px rgba(212,197,197,0.64);
-}
-.log a{
-    text-decoration: none;
-    color:  rgb(21, 90, 3);
-}
-
-
-.btn button{
-    width: 120px;
-    height: 50px;
-   background-color:  rgb(21, 90, 3);
-   font-size: 1.4rem;
-   border-radius: 10px;
-   border: none;
-   box-shadow: -1px -2px 11px 7px rgba(212,197,197,0.64);
-}
-.btn a{
-    text-decoration: none;
-    color: white;
-    
-}
-.menu{
-    display: none;
-    gap: 3px;
-    flex-direction: column;
-}
-.bar{
-    height: 5px;
-    width: 25px;
-    background-color: black;
-}
-
- /* media querry for header   */
-@media screen and (max-width:768px) {
-    nav{
-        position: absolute;
-        top: 50px;
-        right: 0;
-        height: 45vh;
-        background-color:  rgb(21, 90, 3);
-        display: flex;
-        opacity: 0.9;
-        flex-direction: column;
+    header{
+        position: fixed;
+        top: 0;
+        z-index: 2;
         width: 100%;
-        transition: 1s ease-in-out;
-        transform: translateX(-100%);
-        justify-content: center;
-       text-align: center;
-
-    }
-    nav a{
-        color: white;
-        font-size: 1.5rem;
-    }
-
-    .menu{
+        height: 60px;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+       padding: 3%;
+       background-color: rgb(246,246,246);
+    }
+    .logo img{
+    width: 40%;
+    }
+    nav{
+        transform: translateX(-150px);
+        display: flex;
+        gap: 50px;
         
     }
+    nav a{
+        text-decoration: none;
+        color:  rgb(21, 90, 3);
+        border: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+       
+    }
+    #con{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
     
-    nav.hidden{
-        transform: translateX(0);
-    }
-    .log button{
-        width: 80px;
-        height: 40px;
-    }
     .btn button{
+        margin-top: -5px;
         width: 100px;
-        height: 40px;
+        height: 45px;
+       background-color:  rgb(21, 90, 3);
+       font-size: 1.4rem;
+       border-radius: 10px;
+       border: none;
+       box-shadow: -1px -2px 11px 7px rgba(212,197,197,0.64);
     }
-}
-@media screen and (max-width:470px) {
-    .logo img{
-        width: 90%;
+    .btn a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    .btn :hover a{
+        color: black;
+    }
+    .menu{
+        display: none;
+        gap: 3px;
+        flex-direction: column;
+    }
+    .bar{
+        height: 5px;
+        width: 25px;
+        background-color: black;
+    }
+    
+     /* media querry for header   */
+    @media screen and (max-width:768px) {
+        nav{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: 60vh;
+            background-color:  rgb(21, 90, 3);
+            display: flex;
+            opacity: 0.9;
+            flex-direction: column;
+            width: 100%;
+            transition: 1s ease-in-out;
+            transform: translateX(-100%);
+            justify-content: center;
+           text-align: center;
+    
+        }
+        nav a{
+            color: white;
+            font-size: 1.5rem;
+        }
+    
+        .menu{
+            display: flex;
+            
+        }
+        
+        nav.hidden{
+            transform: translateX(0);
         }
         .log button{
             width: 80px;
@@ -138,7 +115,20 @@ nav a{
             width: 100px;
             height: 40px;
         }
-}
+    }
+    @media screen and (max-width:470px) {
+        .logo img{
+            width: 50%;
+            }
+            .log button{
+                width: 80px;
+                height: 40px;
+            }
+            .btn button{
+                width: 100px;
+                height: 40px;
+            }
+    }
 
 #cl{
     background-image: url(contact.jpg);
@@ -204,7 +194,6 @@ nav a{
     display: flex;
     align-items: center;
     gap: 30px;
-    /* background-color: rgb(21, 90, 3); */
 }
 .cycling-item{
     text-align: center;
