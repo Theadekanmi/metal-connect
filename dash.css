@@ -51,6 +51,67 @@ header{
         color: #aaa;
     }
         
+     /* media querry for header   */
+     @media screen and (max-width:768px) {
+        nav{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: 60vh;
+            background-color:  rgb(21, 90, 3);
+            display: flex;
+            opacity: 0.9;
+            flex-direction: column;
+            width: 100%;
+            transition: 1s ease-in-out;
+            transform: translateX(-100%);
+            justify-content: center;
+           text-align: center;
+    
+        }
+        nav a{
+            color: white;
+            font-size: 1.5rem;
+        }
+    
+        .menu{
+            display: flex;
+            
+        }
+        
+        nav.hidden{
+            transform: translateX(0);
+        }
+        .log button{
+            width: 80px;
+            height: 40px;
+        }
+        .btn button{
+            width: 100px;
+            height: 40px;
+        }
+        .serch{
+            transform: translateX(-50px);
+        }
+        .icon{
+            display: flex;
+            gap: 5px;
+        }
+    }
+    @media screen and (max-width:470px) {
+        .logo img{
+            width: 50%;
+            }
+            .log button{
+                width: 80px;
+                height: 40px;
+            }
+            .btn button{
+                width: 100px;
+                height: 40px;
+            }
+    }
+
     aside {
         margin-top: 100px;
          width: 200px;
@@ -68,10 +129,14 @@ header{
         }
     .cont{
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .active-link {
-        border-bottom: 2px solid #ff0000; 
-    }
+        color: rgb(5, 91, 5) !important; 
+        font-weight: bold; 
+    }    
+    
     main { flex-grow: 1; 
         padding: 20px; }
     .dash-cont{
@@ -92,7 +157,7 @@ header{
         font-size: 2rem;
     }
     .dash-item h1::after{
-        content: "METAL CONNECT";
+        content: "METALCONNECT";
         color: rgb(21, 90, 3);
     }
     .dash-item p{
@@ -119,6 +184,13 @@ header{
         color: black;
     }
     
+    @media screen and (max-width:768px){
+        .dash-item{
+            margin-top: 60px;
+            width: 90%;
+            /* transform: translateX(100px); */
+        }
+    }
     /* dashh styling */
     #dashh{
         margin-top: -100px;
@@ -132,7 +204,7 @@ header{
     gap: 30px;
 }
 .dashh-item{
-    width: 25%;
+    width: 20%;
     height: 200px;
     text-align: center;
     background-color: rgb(255, 255, 255);
@@ -146,4 +218,21 @@ header{
 }
 .dashh-item p{
     margin-top: 20px;
+}
+
+@media screen and (max-width:768px){
+    #dashh{
+        margin-top: 50px;
+    }
+    .dashh-cont{
+        flex-direction: column;
+    }
+    .dashh-item{
+        width: 90%;
+        height:270px;
+        
+    }
+    .dashh-item h3{
+        margin-top: 50px;
+    }
 }

@@ -5,33 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-      <link rel="stylesheet" href="recycle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="recycle.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
 </head>
-<body>
+</head>
+<>
   <header>
     <div  class="logo">
-      <img src="logo.jpg" alt="logo img">
+        <div class="logo"><a href="index.html"><img src="logo.jpg" alt="img header"/></a></div>
     </div>
     <div class="serch">
       <input type="search" name="" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
@@ -47,7 +34,7 @@
         <div class="cont">
             <div class="item">
                 <a href="dash.html" onclick="setActiveLink(this)">Dashboard</a>
-                <a href="recycle.html" onclick="setActiveLink(this)">Recycle</a>
+                <!-- <a href="recycle.html" onclick="setActiveLink(this)">Recycle</a> -->
                 <a href="buy.html" onclick="setActiveLink(this)">Buy</a>
                 <a href="lead.html" onclick="setActiveLink(this)">Leaderboard</a>
                 <a href="learn.html" onclick="setActiveLink(this)">Learn</a>
@@ -63,14 +50,51 @@
             </div>
         </div>
     </section>
-    <!-- listing section  -->
-     <section>
-        <div class="list-cont">
-            <div class="list-item">
-                <h3>Recent Listings</h3>
-            </div>
-        </div>
-     </section>
+   
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+    <video id="video" width="640" height="480" autoplay></video>
+    <script>
+        // Setup camera stream
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true })
+    .then((stream) => {
+        video.srcObject = stream;
+    })
+    .catch((err) => {
+        console.error('Error accessing camera:', err);
+        alert('Could not access the camera. Please check your permissions.');
+    });
+
+        // Function to capture image from video stream
+        function captureImage() {
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    return tf.browser.fromPixels(canvas); // Convert the canvas to a Tensor
+}
+
+       // Load model
+async function loadModel() {
+    const model = await tf.loadLayersModel('/converted_keras/tfjs_model/model.json');
+    console.log('Model loaded successfully');
+
+    // Run prediction when capturing image
+    setInterval(() => {
+        const imageData = captureImage();
+        const inputTensor = tf.image.resizeBilinear(imageData, [height, width]); // Adjust height and width
+        const predictions = model.predict(inputTensor.expandDims(0));
+        predictions.print(); // Display prediction
+    }, 1000); // Runs prediction every 1 second
+}
+
+        loadModel();
+    </script>
 </body>
 </html>

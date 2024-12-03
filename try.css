@@ -27,7 +27,6 @@ header{
     }
     nav{
         border-radius: 5px;
-        /* transform: translateX(-150px); */
         display: flex;
         gap: 50px;
     }
@@ -48,6 +47,66 @@ header{
         right: 10px; 
         transform: translateY(-50%);
         color: #aaa;
+    }
+     /* media querry for header   */
+     @media screen and (max-width:768px) {
+        nav{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: 60vh;
+            background-color:  rgb(21, 90, 3);
+            display: flex;
+            opacity: 0.9;
+            flex-direction: column;
+            width: 100%;
+            transition: 1s ease-in-out;
+            transform: translateX(-100%);
+            justify-content: center;
+           text-align: center;
+    
+        }
+        nav a{
+            color: white;
+            font-size: 1.5rem;
+        }
+    
+        .menu{
+            display: flex;
+            
+        }
+        
+        nav.hidden{
+            transform: translateX(0);
+        }
+        .log button{
+            width: 80px;
+            height: 40px;
+        }
+        .btn button{
+            width: 100px;
+            height: 40px;
+        }
+        .serch{
+            transform: translateX(-50px);
+        }
+        .icon{
+            display: flex;
+            gap: 5px;
+        }
+    }
+    @media screen and (max-width:470px) {
+        .logo img{
+            width: 50%;
+            }
+            .log button{
+                width: 80px;
+                height: 40px;
+            }
+            .btn button{
+                width: 100px;
+                height: 40px;
+            }
     }
         
     aside {
@@ -70,7 +129,8 @@ header{
         display: flex;
     }
     .active-link {
-        border-bottom: 2px solid #ff0000; /* Adjust the color and thickness as needed */
-    }
+        color: rgb(5, 91, 5) !important; 
+        font-weight: bold; 
+    }  
     
     

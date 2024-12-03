@@ -3,35 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-      <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="dash.css">
 </head>
 <body>
   <header>
-    <div  class="logo">
-      <img src="logo.jpg" alt="logo img">
+    <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="img header"/></a>
     </div>
     <div class="serch">
       <input type="search" name="" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
@@ -41,13 +26,13 @@
       <i class="fa-regular fa-bell"></i>
       <i class="fa-regular fa-user"></i>
     </div>
-</header>
-    <main>
-      <aside>
+  </header>
+  <main>
+    <aside>
         <div class="cont">
             <div class="item">
                 <a href="dash.html" onclick="setActiveLink(this)">Dashboard</a>
-                <a href="recycle.html" onclick="setActiveLink(this)">Recycle</a>
+                <!-- <a href="recycle.html" onclick="setActiveLink(this)">Recycle</a> -->
                 <a href="buy.html" onclick="setActiveLink(this)">Buy</a>
                 <a href="lead.html" onclick="setActiveLink(this)">Leaderboard</a>
                 <a href="learn.html" onclick="setActiveLink(this)">Learn</a>
@@ -55,33 +40,37 @@
                 <a href="recyc" onclick="setActiveLink(this)">Recycling Center</a>
             </div>
         </div>
-    </aside>
+    </aside>    
     <section>
         <div class="dash-cont">
             <div class="dash-item">
-                <h1>3MTT TEAM</h1>
-                <p>Join us in revolutionlizing the metal recling industry smarter through A.I</p>
+                <h1>3MTT TEAM </h1>
+                <p>Join us in revolutionizing the metal recycling industry smarter through A.I</p>
                 <button class="btn"><a href="recycle.html">Scan Here</a></button>
             </div>
         </div>
-       
     </section>
     <section id="dashh">
         <div class="dashh-cont">
             <div class="dashh-item">
                 <h3>Economy Development</h3>
-                <p>Fosters a circular economy where resources are reused and waste is minimized, contributing to sustainable development goals (SDGs).</p>
+                <p>Fosters a circular economy where resources are reused and waste is minimized, contributing to sustainable development goals (SDGs).</p>
             </div>
             <div class="dashh-item">
                 <h3>Earn Rewards</h3>
-                <p>Earn points for consistent recycling efforts, redeemable for discounts or cash incentives.</p>
+                <p>Earn points for consistent recycling efforts, redeemable for discounts or cash incentives.</p>
             </div>
             <div class="dashh-item">
                 <h3>Community-Driven</h3>
-                <p>Join a thriving community dedicated to sustainable metal recycling practices.</p>
+                <p>Join a thriving community dedicated to sustainable metal recycling practices.</p>
             </div>
         </div>
     </section>
-    </main>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>
