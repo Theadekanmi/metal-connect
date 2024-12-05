@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="img header"/></a>
+    </div>
+    <div class="serch">
+      <input type="search" name="" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="icon">
+      <i class="fa-solid fa-message-dots"></i>
+      <i class="fa-regular fa-bell"></i>
+      <i class="fa-regular fa-user"></i>
+    </div>
+    <div class="menu" id="Menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+  </header>
+  <main>
+    <aside>
+        <div class="cont">
+            <div class="item">
+                <a href="dashboard.html" onclick="setActiveLink(this)">Dashboard</a>
+                <a href="sell.html" onclick="setActiveLink(this)">Sell</a>
+                <a href="buy.html" onclick="setActiveLink(this)">Buy</a>
+                <a href="lead.html" onclick="setActiveLink(this)">Leaderboard</a>
+                <a href="rewards.html" onclick="setActiveLink(this)">Rewards</a>
+                <a href="recyc.html" onclick="setActiveLink(this)">Recycling Center</a>
+            </div>
+        </div>
+    </aside>    
+    <section id="sell">
+        <h5>Sell Your Scraps Here</h5>
+        <div class="sell-cont">
+            <div class="sell-item">
+                <form action="">
+                    <!-- File Upload Section -->
+                    <div class="file-upload">
+                        <label for="imageUpload">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <span>Upload File</span>
+                        </label>
+                        <input type="file" id="imageUpload" accept="image/*" />
+                    </div>
+    
+                    <h6>Fill in your details</h6>
+                    
+                    <!-- Two Input Fields Side-by-Side -->
+                    <div class="input-pair">
+                        <div>
+                            <label for="metalType">Metal Type</label>
+                            <input type="text" id="metalType" placeholder="Aluminium">
+                        </div>
+                        <div>
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Oroki">
+                        </div>
+                    </div>
+    
+                    <!-- Two Input Fields Side-by-Side -->
+                    <div class="input-pair">
+                        <div>
+                            <label for="weight">Estimated Weight</label>
+                            <input type="text" id="weight" placeholder="10kg">
+                        </div>
+                        <div>
+                            <label for="amount">Amount</label>
+                            <input type="text" id="amount" placeholder="#2000">
+                        </div>
+                    </div>
+    
+                    <!-- Checkbox Section -->
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="pickUp">
+                            <label for="pickUp">Pick Up</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dropOff">
+                            <label for="dropOff">Drop Off</label>
+                        </div>
+                    </div>
+    
+                    <!-- Date Input -->
+                    <label for="date">Date</label>
+                    <input type="text" id="date" placeholder="13/12/2024">
+    
+                    <!-- Submit Button -->
+                    <button type="submit">Sell</button>
+                </form>
+            </div>
+        </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

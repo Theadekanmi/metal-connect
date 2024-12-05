@@ -8,6 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
+    
 }
 
 
@@ -127,6 +128,7 @@ header{
         aside :hover  {
             color: rgb(4, 82, 4);
         }
+        
     .cont{
         display: flex;
         justify-content: center;
@@ -139,100 +141,53 @@ header{
     
     main { flex-grow: 1; 
         padding: 20px; }
-    .dash-cont{
-        width: 100%;
-        padding: 3%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-    
-    .dash-item{
-        text-align: center;
-        margin-top: -220px;
-        width: 40%;
-        height: 300px;
-    }
-    .dash-item h1{
-        font-size: 2rem;
-    }
-    .dash-item h1::after{
-        content: "METALCONNECT";
-        color: rgb(21, 90, 3);
-    }
-    .dash-item p{
-        font-size: 1.2rem;
-        margin-top: 10px;
-    }
-
-    .btn {
-        margin-top: 10px;
-        width: 120px;
-        height: 45px;
-       background-color:  rgb(21, 90, 3);
-       font-size: 1.4rem;
-       border-radius: 10px;
-       border: none;
-       box-shadow: -1px -2px 11px 7px rgba(212,197,197,0.64);
-    }
-    .btn a{
-        text-decoration: none;
-        color: white;
-        
-    }
-    .btn :hover {
-        color: black;
-    }
-    
-    @media screen and (max-width:768px){
-        .dash-item{
-            margin-top: 60px;
-            width: 90%;
-            /* transform: translateX(100px); */
+        #pay{
+            text-align: center;
         }
-    }
-    /* dashh styling */
-    #dashh{
-        margin-top: -100px;
-    }
-    .dashh-cont{
-    width: 100%;
-    padding: 3%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    
+        
+        /* Section title styling */
+#pay h5 {
+    font-size: 1.5rem;
+    color: #5b5b5b;
+    text-align: center; /* Center align the heading */
 }
-.dashh-item{
-    width: 20%;
+
+/* Container for payment methods */
+.pay-cont {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 3%; /* Add some padding */
+    height: 300px; /* Set a height for centering */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+/* Individual payment method item */
+.pay-item {
+    width: 35%;
     height: 200px;
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-.dashh-item h3{
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: rgb(21, 90, 3);
-}
-.dashh-item p{
-    margin-top: 20px;
+    background-color: #f1f0f0;
+    border-radius: 7px;
+    display: flex; /* Use flexbox to align links inside */
+    flex-direction: column; /* Stack links vertically */
+    justify-content: center; /* Center links vertically */
+    align-items: center; /* Center links horizontally */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better design */
 }
 
-@media screen and (max-width:768px){
-    #dashh{
-        margin-top: 50px;
-    }
-    .dashh-cont{
-        flex-direction: column;
-    }
-    .dashh-item{
-        width: 90%;
-        height:270px;
-        
-    }
-    .dashh-item h3{
-        margin-top: 50px;
-    }
+/* Links inside payment method */
+.pay-item a {
+    margin-top: 10px; /* Reduced spacing between links */
+    font-size: 1rem; /* Adjusted font size */
+    text-decoration: none;
+    color: rgb(65, 63, 63);
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.pay-item a:hover {
+    color: rgb(6, 94, 6); /* Darker color on hover */
 }

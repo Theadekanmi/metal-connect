@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reycling</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="recyc.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="img header"/></a>
+    </div>
+    <div class="serch">
+      <input type="search" name="" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="icon">
+      <i class="fa-solid fa-message-dots"></i>
+      <i class="fa-regular fa-bell"></i>
+      <i class="fa-regular fa-user"></i>
+    </div>
+    <div class="menu" id="Menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+  </header>
+  <main>
+    <aside>
+        <div class="cont">
+            <div class="item">
+                <a href="dashboard.html" onclick="setActiveLink(this)">Dashboard</a>
+                <a href="sell.html" onclick="setActiveLink(this)">Sell</a>
+                <a href="buy.html" onclick="setActiveLink(this)">Buy</a>
+                <a href="lead.html" onclick="setActiveLink(this)">Leaderboard</a>
+                <a href="rewards.html" onclick="setActiveLink(this)">Rewards</a>
+                <a href="recyc.html" onclick="setActiveLink(this)">Recycling Center</a>
+            </div>
+        </div>
+    </aside>    
+    <section id="map">
+        <h5>Locate any Recycling Facility near you</h5>
+        <div class="map-cont">
+            <div class="map-item">
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" placeholder="Landmark...">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126497.66962347049!2d4.480298696494794!3d7.784293140727144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787e4c949b8fd%3A0x33c62c1600f59277!2sOsogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1732842571958!5m2!1sen!2sng" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

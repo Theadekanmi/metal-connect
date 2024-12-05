@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 3%;
+   background-color: rgb(246,246,246);
+}
+.logo img{
+    width: 40%;
+    }
+    nav{
+        border-radius: 5px;
+        /* transform: translateX(-150px); */
+        display: flex;
+        gap: 50px;
+    }
+    .serch {
+        position: relative;
+        width: 300px; 
+    }
+    .serch input[type="search"] {
+        width: 100%;
+        padding: 10px 40px 10px 10px; 
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+    }
+    .serch .fa-magnifying-glass {
+        position: absolute;
+        top: 50%;
+        right: 10px; 
+        transform: translateY(-50%);
+        color: #aaa;
+    }
+        
+     /* media querry for header   */
+     @media screen and (max-width:768px) {
+        nav{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: 60vh;
+            background-color:  rgb(21, 90, 3);
+            display: flex;
+            opacity: 0.9;
+            flex-direction: column;
+            width: 100%;
+            transition: 1s ease-in-out;
+            transform: translateX(-100%);
+            justify-content: center;
+           text-align: center;
+    
+        }
+        nav a{
+            color: white;
+            font-size: 1.5rem;
+        }
+    
+        .menu{
+            display: flex;
+            
+        }
+        
+        nav.hidden{
+            transform: translateX(0);
+        }
+        .log button{
+            width: 80px;
+            height: 40px;
+        }
+        .btn button{
+            width: 100px;
+            height: 40px;
+        }
+        .serch{
+            transform: translateX(-50px);
+        }
+        .icon{
+            display: flex;
+            gap: 5px;
+        }
+    }
+    @media screen and (max-width:470px) {
+        .logo img{
+            width: 50%;
+            }
+            .log button{
+                width: 80px;
+                height: 40px;
+            }
+            .btn button{
+                width: 100px;
+                height: 40px;
+            }
+    }
+
+    aside {
+        margin-top: 100px;
+         width: 200px;
+         padding: 20px;
+         background-color: white;
+         }
+         .item a { 
+            display: block; 
+            margin-bottom: 10px; 
+            text-decoration: none; 
+            color: #333; 
+        }
+        aside :hover  {
+            color: rgb(4, 82, 4);
+        }
+        
+    .cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .active-link {
+        color: rgb(5, 91, 5) !important; 
+        font-weight: bold; 
+    }    
+    
+    main { flex-grow: 1; 
+        padding: 20px; }
+
+        /* Styling for the heading */
+#map h5 {
+    color: rgb(53, 52, 52);
+    text-align: center;
+    /* margin-top: -200px; */
+    font-size: 1.5rem;
+}
+
+/* Styling for the map container */
+.map-cont {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styling for the map item */
+.map-item {
+    width: 50%;
+    text-align: center;
+}
+
+/* Input field styling */
+.map-item input {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Responsive iframe */
+.map-item iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .map-item {
+        width: 90%; /* Full-width for smaller screens */
+    }
+
+    #map h5 {
+        font-size: 1.5rem;
+    }
+
+    .map-item iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-item iframe {
+        height: 250px;
+    }
+
+    .map-item input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+

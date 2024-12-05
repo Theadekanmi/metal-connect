@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="lead.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="img header"/></a>
+    </div>
+    <div class="serch">
+      <input type="search" name="" id="search" placeholder="search"><i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="icon">
+      <i class="fa-solid fa-message-dots"></i>
+      <i class="fa-regular fa-bell"></i>
+      <i class="fa-regular fa-user"></i>
+    </div>
+    <div class="menu" id="Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </header>
+  <main>
+    <aside>
+        <div class="cont">
+            <div class="item">
+                <a href="dashboard.html" onclick="setActiveLink(this)">Dashboard</a>
+                <a href="sell.html" onclick="setActiveLink(this)">Sell</a>
+                <a href="buy.html" onclick="setActiveLink(this)">Buy</a>
+                <a href="lead.html" onclick="setActiveLink(this)">Leaderboard</a>
+                <a href="rewards.html" onclick="setActiveLink(this)">Rewards</a>
+                <a href="recyc.html" onclick="setActiveLink(this)">Recycling Center</a>
+            </div>
+        </div>
+    </aside>    
+    <section id="leaderboard">
+        <h2>Top Performers</h2>
+        <div class="card">
+            <span class="rank">1</span>
+            <img src="Up work.jpeg" alt="User Image" class="profile-pic">
+            <div class="details">
+                <span class="username">Aliyah Gida</span>
+                <span class="points">148 Points</span>
+            </div>
+        </div>
+        <div class="card">
+            <span class="rank">2</span>
+            <img src="Up work.jpeg" alt="User Image" class="profile-pic">
+            <div class="details">
+                <span class="username">John Doe</span>
+                <span class="points">132 Points</span>
+            </div>
+        </div>
+        <div class="card">
+            <span class="rank">3</span>
+            <img src="Up work.jpeg" alt="User Image" class="profile-pic">
+            <div class="details">
+                <span class="username">Jane Smith</span>
+                <span class="points">120 Points</span>
+            </div>
+        </div>
+    </section>
+    
+    
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
