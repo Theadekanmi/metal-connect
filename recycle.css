@@ -289,67 +289,43 @@ section#scan h5 {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px;
-    }
-
-    .logo img {
-        width: 80px;
-    }
-
-    .search {
-        flex-grow: 1;
-        margin: 10px 0;
-    }
-
-    .icon {
-        gap: 10px;
-    }
-
-    main {
-        flex-direction: column;
-    }
-
-    aside {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    aside .item a {
-        font-size: 1.2rem;
-    }
+ 
 
     .scan-item {
         width: 100%;
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .scan-item button,
+    .feedback-form button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
     }
 }
 
+/* Further optimization for very small screens */
 @media screen and (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search {
-        max-width: 100%;
-    }
-
-    .icon i {
-        font-size: 1rem;
-    }
-
-    aside .item a {
-        font-size: 1rem;
-    }
-
     .scan-item {
-        padding: 15px;
+        padding: 10px;
     }
 
     .scan-item button {
         font-size: 0.9rem;
-        padding: 8px 15px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .feedback-form button {
+        font-size: 1rem;
+    }
+
+    .sell-link {
+        font-size: 0.9rem;
+        padding: 8px 10px;
     }
 }
