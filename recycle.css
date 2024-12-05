@@ -293,7 +293,8 @@ section#scan h5 {
 
     .scan-item {
         width: 100%;
-        max-width: 100%; /* Full width for smaller screens */
+        max-width: 100%;
+        margin-top: 50px; /* Full width for smaller screens */
     }
 
     .scan-item button,
